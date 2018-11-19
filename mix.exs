@@ -13,7 +13,7 @@ defmodule Hphoto.MixProject do
 
   def application do
     [
-      applications: [:logger, :extwitter],
+      applications: [:logger, :extwitter, :httpoison],
       extra_applications: [:logger]
     ]
   end
@@ -21,7 +21,8 @@ defmodule Hphoto.MixProject do
   defp deps do
     [
       {:oauther, "~> 1.1"},
-      {:extwitter, "~> 0.8"}
+      {:extwitter, "~> 0.8"},
+      {:httpoison, "~> 0.7.2"},
     ]
   end
 end
