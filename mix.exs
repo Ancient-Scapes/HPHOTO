@@ -22,7 +22,7 @@ defmodule Hphoto.MixProject do
     [
       {:oauther, "~> 1.1"},
       {:extwitter, "~> 0.8"},
-      {:httpoison, "~> 0.7.2"},
+      {:httpoison, "~> 0.7.2"}
     ]
   end
 end
