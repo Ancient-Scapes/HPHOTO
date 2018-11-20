@@ -6,8 +6,9 @@ defmodule Hphoto do
 
   def fetchListTimeLine do
     # TODO リストの選択
-    ExTwitter.list_timeline("list5", "_Ancient_Scapes", [count: 10])
+    ExTwitter.list_timeline("list5", "_Ancient_Scapes", [count: 50])
     |> Enum.map(&(extractionTweet(&1)))
+    |> Enum.filter(&(&1 !== nil))
   end
 
   def extractionTweet(t) do
@@ -18,13 +19,16 @@ defmodule Hphoto do
         "text" => t.text,
         "favorite_count" => t.favorite_count,
         "retweet_count" => t.retweet_count,
-        "media" => t.entities.media |> Enum.map(&(extractionMedia(&1)))
+        "media" => t.extended_entities.media |> Enum.map(&(extractionMedia(&1)))
       }
     end
   end
 
   def extractionMedia(m) do
-    m.media_url
+    %{
+      "url" => m.media_url,
+      "type" => m.type
+    }
   end
 
 end
