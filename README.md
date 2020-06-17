@@ -1,9 +1,6 @@
-# Hphoto
-
-### Hyper photo harvest optimization in twitter 
+# TWITTER-PHOTO-SAVE-IMAGES
 
 ## description
-
 
 ## Setup
 
