@@ -1,4 +1,4 @@
-# TWITTER-PHOTO-SAVE-IMAGES
+# twitter-photo-save-images
 
 ## description
 
